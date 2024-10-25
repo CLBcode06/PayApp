@@ -1,0 +1,23 @@
+<html>  
+    <head>  
+        <title>O.P: Redirecting</title>
+        <meta http-equiv="refresh" content="0;url=/homePage"> 
+        <link rel="icon" href="/static/Images/tempLogo.png" type="image/x-icon">
+    </head>
+
+    <body>
+        <p>Page not Redirecting: <a href="#" onclick="navigateToPage('/homePage'); return false;">Click Here</a></p> 
+    </body>
+
+    <script src="/static/javascript.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let titles = ['O.P: Redirecting.', 'O.P: Redirecting..', 'O.P: Redirecting...'];
+            let index = 0;
+            setInterval(function() {
+                document.title = titles[index];
+                index = (index + 1) % titles.length;
+            });
+        });
+    </script>
+</html>
